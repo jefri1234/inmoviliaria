@@ -3,7 +3,7 @@ import React from 'react'
 function Usuario() {
   return (
     <div>
-      usaurio
+      Desde mi pc Andy
     </div>
   )
 }
