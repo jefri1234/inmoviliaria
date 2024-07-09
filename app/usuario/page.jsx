@@ -3,7 +3,7 @@ import React from 'react'
 function Usuario() {
   return (
     <div>
-      Desde mi pc Andy  jeff .....
+      Desde mi pc Andy de nuevo
     </div>
   )
 }
