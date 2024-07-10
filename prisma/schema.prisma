@@ -13,10 +13,10 @@ model Usuario{
   idUsuario Int @id @default(autoincrement())
   nombre String
   apellido String
-  fechaNacimiento DateTime
   correo String
   telefono String
   direccion String
+  dni String 
 }
 
 
