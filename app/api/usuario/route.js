@@ -32,8 +32,6 @@ export async function POST(request){
     })
 }
 
-
-
 export function PUT(){
 
     return NextResponse.json({
