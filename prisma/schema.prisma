@@ -3,8 +3,6 @@ datasource db {
   url= env("DATABASE_URL")
   }
 
-
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -19,4 +17,22 @@ model Usuario{
   dni String 
 }
 
+model TipoPublicacion {
+  idTipoPublicacion Int @id @default(autoincrement())
+  nombre            String // Departamento, Habitacion, Terreno, Casa
+  publicacion Publicacion[]
+}
 
+model Publicacion {
+  idPublicacion    Int @id @default(autoincrement())
+  titulo           String
+  descripcion      String
+  precio           Float
+  estado           BigInt //(1)activo
+  departamento     String
+  ciudad           String
+  coordenadas      String
+  direccion        String
+  tipoPublicacion  TipoPublicacion @relation(fields: [tipoid], references: [idTipoPublicacion])
+  tipoid           Int
+}
